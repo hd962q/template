@@ -1,5 +1,8 @@
- resource "aws_launch_template" "sample_template" {
-  name = "sample_template"
+provider "aws" {
+ region = "us-east-2"
+} 
+resource "aws_launch_template" "sample_template1" {
+  name = "sample_template1"
 
   block_device_mappings {
     device_name = "/dev/xvda"
